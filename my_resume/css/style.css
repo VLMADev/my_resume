@@ -1,0 +1,212 @@
+* {
+  margin: 0; /* внешний отсуп */
+  padding: 0; /* внутренний отсуп */
+
+  border: 0; /* обводка */
+}
+
+*,
+*:before,
+*:after {
+  /* меняет ширину блока что было удобно верстать */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* box-sizing: border-box - начинает включать в себя внутренний отступ и обводку */
+}
+
+:focus,
+:active {
+  /* убераем линии обводки у некоторых браузеров */
+  outline: none;
+}
+
+a:focus,
+a:active {
+  /* убераем линии обводки у некоторых браузеров */
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  /* делаем элементы блочными */
+  display: block;
+}
+
+html,
+body {
+  /* уравнивает ширфты и элементы для разынх браузеров (заприщают самовольное увеличение шрифта(пример))*/
+  width: 100%;
+  height: 100%;
+  background-color: #3f3f3f;
+  font-family: 'Nunito', sans-serif;  
+  font-size: 100%;
+  font-size: 14px;
+  line-height: 1;
+
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  /* наследование шрифта */
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  /*убирают крестик в internet explayer*/
+  display: none;
+}
+
+button {
+  /*убирают курсор при вводе текста*/
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  /* убирают лишние отступы в firefox для кнопок */
+  padding: 0;
+
+  border: 0;
+}
+a,
+a:visited {
+  /**/
+  text-decoration: none;
+  
+}
+
+a:hover {
+  /**/
+  text-decoration: none;
+}
+
+ul li {
+  /**/
+  list-style: none;
+}
+
+img {
+  /**/
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* обнуляем заголовки h */
+  font-size: inherit;
+  font-weight: 400;
+}
+.container{
+  display: flex;
+  margin: auto;
+  max-width: 1140px;
+  background-color: rgb(60, 165, 165);
+}
+.personalInfo {
+  background-color: #191919;
+}
+.personalInfo__imgFio la::after {
+  content: "";
+  display: block;
+  border-bottom: 2px #A5A692 solid;
+  
+}
+.personalInfo__imgFio {
+  position: relative;
+  text-align: center;
+}
+.personalInfo__imgFio--img {
+  position: relative;
+  margin: 25px 50px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px #A5A692 solid;
+}
+.personalInfo__imgFio--fio {
+
+  font-weight: 700;
+  font-size: 26px;
+  color: #F2A71B;
+  text-align: center;
+  /* 
+  color: #191919; 
+  color: #025E73;
+  color: #A5A692;
+  color: #F2A71B;
+  */
+}
+.personalInfo__imgFio--year {
+  color: #A5A692;
+  font-size: 16px;
+}
+.personalInfo__imgFio--position {
+  font-size: 18px;
+  color: #F2A71B;
+  font-weight: 700;
+}
+.personalInfo__contact {
+  display: flex;
+}
+.personalInfo__contact *{
+  color: #A5A692;
+}
+.personalInfo__contact--title {
+
+
+}
+.personalInfo__contact--phone {
+}
+.personalInfo__contact--mail {
+}
+.personalInfo__contact--linkedin {
+}
+.personalInfo__contact--github {
+}
+.personalInfo__contact--geolocation {
+}
+.personalInfo__education {
+}
+.personalInfo__education--title {
+}
+.personalInfo__education--year {
+}
+.personalInfo__education--profession {
+}
+.personalInfo__education--university {
+}
+.personalInfo__languages {
+}
+.personalInfo__languages--English {
+}
+.personalInfo__languages-- {
+}
+.mainlInfo {
+  width: 100%;
+  background-color: #025E73;
+}
+.mainlInfo__about {
+}
+.mainlInfo__about--p {
+}
+.mainlInfo__about--ul {
+}
+.mainlInfo__experience {
+}
+.mainlInfo__experience_main {
+}
+.mainlInfo__experience_main--workTime {
+}
+.mainlInfo__experience_main--description {
+}
+.mainlInfo__professionalSkills {
+}

@@ -92,6 +92,7 @@ ul li {
 
 img {
   /**/
+  max-width: 100%;
   vertical-align: top;
 }
 
@@ -106,13 +107,16 @@ h6 {
   font-weight: 400;
 }
 .container{
+  box-sizing: border-box;
   display: flex;
   margin: 50px auto 0 auto;
-  max-width: 1140px;
+  max-width: 1200px;
   background: no-repeat url(/my_resume/img/Polygon\ Luminary.svg);
+  background-size: cover;
 }
+
 .personalInfo {
-  font-size: 16px;
+
   padding: 0 0 50px 0;
   margin: 0 10px 0 0;
   border-right: 2px #A5A692 solid;
@@ -120,44 +124,45 @@ h6 {
 
 .personalInfo__imgFio {
   text-align: center;
-
 }
 .personalInfo__imgFio::after {
   content: "";
-  width: 80%;
+  max-width: 80%;
   display: block;
   border-bottom: 1px #A5A692 solid;
   padding: 10px 0 0 0;
   margin: 0 auto 20px auto;
   
 }
-.personalInfo__imgFio--blockImg {
-  position: relative;
-}
 .personalInfo__imgFio--img {
   position: relative;
-  margin: 25px 50px;
-  width: 250px;
-  height: 250px;
+  margin: 25px auto;
+  width: 200px;
+  height: 200px;  
   border-radius: 50%;
+  z-index: 2;
   border: 2px #A5A692 solid;
 }
 .personalInfo__imgFio--img:hover{
   box-shadow: 0 0 10px #ae00ff, 0 0 20px #001eff, 0 0 50px #ae00ff;
-  transition-delay: 10.6s;
+  border: 2px #ae00ff solid;
+  transition-delay: 1s;
+  animation: ligth 1s linear;
 }
-.personalInfo__imgFio--blockImg span:nth-child(1) {
-  border-radius: 50%; 
-  width: 150px;
-  height: 150px;
-  border: 2px solid transparent;
-  background: linear-gradient(90deg, transparent, #ae00ff);
-}
-.personalInfo__imgFio--img span:nth-child(2) {
-  border-radius: 50%; 
-  border: 2px solid transparent;
-  background: linear-gradient(90deg, transparent, #001eff);
-  
+
+@keyframes ligth {
+  0% {
+    box-shadow: -4px 0px 20px #001eff, 4px 0px 5px #ae00ff;
+  }
+  33% {
+    box-shadow: 0px 4px 20px #ae00ff, 0px -4px 5px #001eff;
+  }
+  66% {
+    box-shadow: 0px 0px 20px #001eff, 0px 0px -5px #ae00ff;
+  }
+	100% {
+    box-shadow: 4px 0px 5px #ae00ff, -4px 0px 20px #001eff;
+	}
 }
 
 .personalInfo__imgFio--fio {
@@ -196,11 +201,12 @@ h6 {
 }
 .personalInfo__contact *{
   color: #A5A692;
-  margin: 0 0 10px 10px;
+  margin: 0 0 0px 10px;
 }
 .personalInfo__contact--title {
   text-align: center;
   font-size: 18px;
+  margin: 0 0 10px 0;
   color: #F2A71B;
   font-weight: 700;
   text-transform: uppercase;
@@ -214,6 +220,7 @@ h6 {
   vertical-align: middle;
   background: url(/my_resume/img/phone-call.svg);
 }
+
 .personalInfo__contact--mail::before {
   content: " ";
   display: inline-block;
@@ -249,8 +256,42 @@ h6 {
   vertical-align: middle;
   background: url(/my_resume/img/map-pin.svg);
 }
-.personalInfo__education {
+.personalInfo__contact ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.personalInfo__contact ul li {
+  margin-bottom: 10px;
+}
+.personalInfo__contact ul a {
+  position: relative; 
+}
+.personalInfo__contact a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 6px;
+  background-color: #b8bdc0;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .4s ease-in-out;
+}
+.personalInfo__contact ul a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.personalInfo__contact ul a:hover {
+  color: rgb(255, 255, 255);
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: transform, color .4s ease-in-out;
+}
 
+.personalInfo__education {
 }
 .personalInfo__education::after {
   content: "";
@@ -266,6 +307,7 @@ h6 {
 .personalInfo__education--title {
   text-align: center;
   font-size: 18px;
+  
   color: #F2A71B;
   font-weight: 700;
   text-transform: uppercase;
@@ -277,7 +319,6 @@ h6 {
 .personalInfo__education--profession {
   color: #F2A71B;
   font-weight: 700;
-
 }
 .personalInfo__education--university {
   color: #025E73;
@@ -315,12 +356,14 @@ h6 {
   display: inline-block;
 }
 .mainlInfo {
+  box-sizing: border-box;
   color: #A5A692;
   width: 100%;
   font-size: 16px;
   margin: 50px 0 0 20px;
 }
 .mainlInfo__about {
+  
 }
 .mainlInfo__about--title{
   text-align: left;
@@ -417,3 +460,424 @@ h6 {
 .mainlInfo__professionalSkills li {
   margin: 0 0 10px 0;
 } 
+
+@media (max-width: 1200px){
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px){
+  .container {
+    max-width: 750px;
+    background: no-repeat url(/my_resume/img/Polygon\ Luminary1.svg);
+    background-size: cover;
+  }
+  .container h2 {
+    font-size: 16px;
+  }
+  .personalInfo__contact iframe{
+    display: none;
+  }
+  .personalInfo {
+    font-size: 16px;
+  }
+  .personalInfo__imgFio {
+ 
+  }
+  .personalInfo__imgFio--img {
+    width: 170px;
+    height: 170px; 
+  }
+  .personalInfo__imgFio--fio {
+    letter-spacing: .5px;
+    font-size: 20px !important;
+  }
+  .personalInfo__imgFio--year {
+   
+  }
+  .personalInfo__imgFio--position {
+    letter-spacing: .5px;
+  }
+  .personalInfo__contact {
+  }
+  .personalInfo__contact--title {
+    margin: 0 0 15px 0px;
+  }
+  .personalInfo__contact--phone {
+    
+  }
+  .personalInfo__contact--mail {
+  }
+  .personalInfo__contact--linkedin {
+  }
+  .personalInfo__contact--github {
+  }
+  .personalInfo__contact--geolocation {
+  }
+  .personalInfo__education {
+    
+  }
+  .personalInfo__education--title {
+  }
+  .personalInfo__education--year {
+    font-size: 14px;
+  }
+  .personalInfo__education--profession {
+  }
+  .personalInfo__education--university {
+  }
+  .personalInfo__languages {
+  }
+  .personalInfo__languages--title {
+  }
+  .personalInfo__languages--ul {
+  }
+  .personalInfo__languages--English {
+  }
+  .English__title {
+  }
+  .personalInfo__languages-- {
+  }
+  .mainlInfo {
+  
+  }
+  .mainlInfo__about {
+  }
+  .mainlInfo__about--title {
+  }
+  .mainlInfo__about--info {
+  }
+  .mainlInfo__about--ul {
+  }
+  .mainlInfo__experience {
+  }
+  .mainlInfo__experience--title {
+  }
+  .mainlInfo__experience_main {
+  }
+  .mainlInfo__experience_main--workTime {
+    font-size: 14px;
+  }
+  .mainlInfo__experience_main--description {
+  }
+  .description__experience {
+  }
+  .mainlInfo__professionalSkills {
+  }
+  .mainlInfo__professionalSkills--title {
+  }
+}
+@media (max-width: 767px){
+  .container {
+    max-width: none;
+    display: block;
+    margin: 0;
+  }
+  .personalInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    border-right: none;
+    margin: 0 0px;
+  }
+  .personalInfo::after {
+    content: "";
+    width: 80%;
+    display: block;
+    border-bottom: 1px #A5A692 solid;
+    margin: 20px auto 0px auto;
+  }
+  .personalInfo__imgFio {
+  min-width: 100%;
+  }
+
+  .personalInfo__imgFio--img {
+    
+  }
+  .personalInfo__imgFio--fio {
+  }
+  .personalInfo__imgFio--year {
+  }
+  .personalInfo__imgFio--position {
+  }
+  .personalInfo__contact {
+    max-width: 33.333%;
+    border-right: 1px #A5A692 solid;
+    padding: 0 10px;
+  }
+  .personalInfo__contact::after {
+    content: "";
+    width: 80%;
+    display: block;
+    border-bottom: none;
+    margin: 0 auto 20px auto;
+  }
+  .personalInfo__contact--title {
+  }
+  .personalInfo__contact--phone {
+  }
+  .personalInfo__contact--mail {
+  }
+  .personalInfo__contact--linkedin {
+  }
+  .personalInfo__contact--github {
+  }
+  .personalInfo__contact--geolocation {
+  }
+  .personalInfo__education {
+    max-width: 33.333%;
+    padding: 0 10px;
+  }
+  
+  .personalInfo__education * {
+    margin: 0 0 10px 0px;
+
+  }
+  .personalInfo__education :last-child{
+    margin: 0 0 0 0;
+  }
+  .personalInfo__education::after {
+    content: "";
+    width: 80%;
+    display: block;
+    border-bottom: none;
+    margin: 0 auto 20px auto;
+  }
+  .personalInfo__education--title {
+    margin: 0 0 20px 0;
+  }
+  .personalInfo__education--year {
+  }
+  .personalInfo__education--profession {
+  }
+  .personalInfo__education--university {
+  }
+  .personalInfo__languages {
+    max-width: 33.333%;
+    padding: 0 10px;
+    margin: 0 0 0px 0px;
+    border-left: 1px #A5A692 solid;
+  }
+  .personalInfo__languages--title {
+  }
+  .personalInfo__languages--ul {
+  }
+  .personalInfo__languages--English {
+  }
+  .English__title {
+  }
+  .personalInfo__languages-- {
+  }
+  .mainlInfo {
+    margin: 20px 0 0 0;
+  }
+  .mainlInfo>* {
+    padding: 0 0 0 20px;
+  }
+  .mainlInfo__about {
+  }
+  .mainlInfo__about::after {
+    content: "";
+    padding: 0;
+    width: 90%;
+    display: block;
+    border-bottom: 1px #A5A692 solid;
+    margin: 10px auto 20px auto;
+  }
+  .mainlInfo__about--title {
+  }
+  .mainlInfo__about--info {
+  }
+  .mainlInfo__about--ul {
+  }
+  .mainlInfo__experience {
+
+  }
+  .mainlInfo__experience::after {
+    content: "";
+    padding: 0;
+    width: 90%;
+    display: block;
+    border-bottom: 1px #A5A692 solid;
+    margin: 10px auto 20px auto;
+  }
+  .mainlInfo__experience--title {
+  }
+  .mainlInfo__experience_main {
+  }
+  .mainlInfo__experience_main:last-child {
+    margin: 0;
+  }
+  .mainlInfo__experience_main--workTime {
+  }
+  .mainlInfo__experience_main--description {
+  }
+  .description__experience {
+  }
+  .mainlInfo__professionalSkills {
+    padding-bottom: 20px;
+  }
+  .mainlInfo__professionalSkills--title {
+  }
+}
+@media (max-width: 685px) {
+  .container {
+    display: block;
+  }
+  .personalInfo {
+    display: block;
+  }
+  .personalInfo__imgFio {
+  }
+  .personalInfo__imgFio--img {
+  }
+  .personalInfo__imgFio--fio {
+  }
+  .personalInfo__imgFio--year {
+  }
+  .personalInfo__imgFio--position {
+  }
+  .personalInfo__contact {
+  }
+  .personalInfo__contact--title {
+  }
+  .personalInfo__contact--phone {
+  }
+  .personalInfo__contact--mail {
+  }
+  .personalInfo__contact--linkedin {
+  }
+  .personalInfo__contact--github {
+  }
+  .personalInfo__contact--geolocation {
+  }
+  .personalInfo__education {
+  }
+  .personalInfo__education--title {
+  }
+  .personalInfo__education--year {
+  }
+  .personalInfo__education--profession {
+  }
+  .personalInfo__education--university {
+  }
+  .personalInfo__languages {
+  }
+  .personalInfo__languages--title {
+  }
+  .personalInfo__languages--ul {
+  }
+  .personalInfo__languages--English {
+  }
+  .English__title {
+  }
+  .personalInfo__languages-- {
+  }
+  .mainlInfo {
+  }
+  .mainlInfo__about {
+  }
+  .mainlInfo__about--title {
+  }
+  .mainlInfo__about--info {
+  }
+  .mainlInfo__about--ul {
+  }
+  .mainlInfo__experience {
+  }
+  .mainlInfo__experience--title {
+  }
+  .mainlInfo__experience_main {
+  }
+  .mainlInfo__experience_main--workTime {
+  }
+  .mainlInfo__experience_main--description {
+  }
+  .description__experience {
+  }
+  .mainlInfo__professionalSkills {
+  }
+  .mainlInfo__professionalSkills--title {
+  }
+}
+@media (max-width: 480px) {
+  .container {
+ 
+  }
+  .personalInfo {
+ 
+  }
+  .personalInfo__imgFio {
+  }
+  .personalInfo__imgFio--img {
+  }
+  .personalInfo__imgFio--fio {
+  }
+  .personalInfo__imgFio--year {
+  }
+  .personalInfo__imgFio--position {
+  }
+  .personalInfo__contact {
+  }
+  .personalInfo__contact--title {
+  }
+  .personalInfo__contact--phone {
+  }
+  .personalInfo__contact--mail {
+  }
+  .personalInfo__contact--linkedin {
+  }
+  .personalInfo__contact--github {
+  }
+  .personalInfo__contact--geolocation {
+  }
+  .personalInfo__education {
+  }
+  .personalInfo__education--title {
+  }
+  .personalInfo__education--year {
+  }
+  .personalInfo__education--profession {
+  }
+  .personalInfo__education--university {
+  }
+  .personalInfo__languages {
+  }
+  .personalInfo__languages--title {
+  }
+  .personalInfo__languages--ul {
+  }
+  .personalInfo__languages--English {
+  }
+  .English__title {
+  }
+  .personalInfo__languages-- {
+  }
+  .mainlInfo {
+  }
+  .mainlInfo__about {
+  }
+  .mainlInfo__about--title {
+  }
+  .mainlInfo__about--info {
+  }
+  .mainlInfo__about--ul {
+  }
+  .mainlInfo__experience {
+  }
+  .mainlInfo__experience--title {
+  }
+  .mainlInfo__experience_main {
+  }
+  .mainlInfo__experience_main--workTime {
+  }
+  .mainlInfo__experience_main--description {
+  }
+  .description__experience {
+  }
+  .mainlInfo__professionalSkills {
+  }
+  .mainlInfo__professionalSkills--title {
+  }
+}

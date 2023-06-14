@@ -5,55 +5,47 @@
   border: 0; /* обводка */
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   /* меняет ширину блока что было удобно верстать */
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   /* box-sizing: border-box - начинает включать в себя внутренний отступ и обводку */
 }
 
-:focus,
-:active {
+:focus, :active {
   /* убераем линии обводки у некоторых браузеров */
   outline: none;
 }
 
-a:focus,
-a:active {
+a:focus, a:active {
   /* убераем линии обводки у некоторых браузеров */
   outline: none;
 }
 
-nav,
-footer,
-header,
-aside {
+nav, footer, header, aside {
   /* делаем элементы блочными */
   display: block;
 }
 
-html,
-body {
+html, body {
   /* уравнивает ширфты и элементы для разынх браузеров (заприщают самовольное увеличение шрифта(пример))*/
   width: 100%;
   height: 100%;
-  background-color: #3f3f3f;
-  font-family: 'Nunito', sans-serif;  
+
+  background-color: #3F3F3F;
+
+  font-family: "Nunito", sans-serif;
   font-size: 100%;
   font-size: 14px;
   line-height: 1;
 
   -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
 }
 
-input,
-button,
-textarea {
+input, button, textarea {
   /* наследование шрифта */
   font-family: inherit;
 }
@@ -73,11 +65,9 @@ button::-moz-focus-inner {
 
   border: 0;
 }
-a,
-a:visited {
+a, a:visited {
   /**/
   text-decoration: none;
-  
 }
 
 a:hover {
@@ -93,32 +83,30 @@ ul li {
 img {
   /**/
   max-width: 100%;
+
   vertical-align: top;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   /* обнуляем заголовки h */
   font-size: inherit;
   font-weight: 400;
 }
-.container{
-  box-sizing: border-box;
+.container {
   display: flex;
-  margin: 50px auto 0 auto;
+
+  box-sizing: border-box;
   max-width: 1200px;
+  margin: 50px auto 0 auto;
+
   background: no-repeat url(/my_resume/img/Polygon\ Luminary.svg);
   background-size: cover;
 }
 
 .personalInfo {
-
-  padding: 0 0 50px 0;
   margin: 0 10px 0 0;
+  padding: 0 0 50px 0;
+
   border-right: 2px #A5A692 solid;
 }
 
@@ -126,51 +114,58 @@ h6 {
   text-align: center;
 }
 .personalInfo__imgFio::after {
-  content: "";
-  max-width: 80%;
   display: block;
-  border-bottom: 1px #A5A692 solid;
-  padding: 10px 0 0 0;
+
+  max-width: 80%;
   margin: 0 auto 20px auto;
-  
+  padding: 10px 0 0 0;
+
+  content: "";
+
+  border-bottom: 1px #A5A692 solid;
 }
 .personalInfo__imgFio--img {
   position: relative;
-  margin: 25px auto;
-  width: 200px;
-  height: 200px;  
-  border-radius: 50%;
   z-index: 2;
+
+  width: 200px;
+  height: 200px;
+  margin: 25px auto;
+
   border: 2px #A5A692 solid;
+  border-radius: 50%;
 }
-.personalInfo__imgFio--img:hover{
-  box-shadow: 0 0 10px #ae00ff, 0 0 20px #001eff, 0 0 50px #ae00ff;
-  border: 2px #ae00ff solid;
+.personalInfo__imgFio--img:hover {
   transition-delay: 1s;
   animation: ligth 1s linear;
+
+  border: 2px #AE00FF solid;
+  box-shadow: 0 0 10px #AE00FF, 0 0 20px #001EFF, 0 0 50px #AE00FF;
 }
 
 @keyframes ligth {
   0% {
-    box-shadow: -4px 0px 20px #001eff, 4px 0px 5px #ae00ff;
+    box-shadow: -4px 0px 20px #001EFF, 4px 0px 5px #AE00FF;
   }
   33% {
-    box-shadow: 0px 4px 20px #ae00ff, 0px -4px 5px #001eff;
+    box-shadow: 0px 4px 20px #AE00FF, 0px -4px 5px #001EFF;
   }
   66% {
-    box-shadow: 0px 0px 20px #001eff, 0px 0px -5px #ae00ff;
+    box-shadow: 0px 0px 20px #001EFF, 0px 0px -5px #AE00FF;
   }
-	100% {
-    box-shadow: 4px 0px 5px #ae00ff, -4px 0px 20px #001eff;
-	}
+  100% {
+    box-shadow: 4px 0px 5px #AE00FF, -4px 0px 20px #001EFF;
+  }
 }
 
 .personalInfo__imgFio--fio {
-  font-weight: 700;
-  font-size: 26px;
-  color: #F2A71B;
   text-align: center;
   text-transform: capitalize;
+
+  color: #F2A71B;
+
+  font-size: 26px;
+  font-weight: 700;
   /* 
   color: #191919; 
   color: #025E73;
@@ -179,199 +174,237 @@ h6 {
   */
 }
 .personalInfo__imgFio--year {
-  color: #A5A692;
   margin: 5px;
+
   text-transform: lowercase;
+
+  color: #A5A692;
 }
 .personalInfo__imgFio--position {
-  font-size: 18px;
-  color: #F2A71B;
-  font-weight: 700;
   text-transform: uppercase;
+
+  color: #F2A71B;
+
+  font-size: 18px;
+  font-weight: 700;
 }
 .personalInfo__contact {
   text-align: left;
 }
 .personalInfo__contact::after {
-  content: "";
-  width: 80%;
   display: block;
-  border-bottom: 1px #A5A692 solid;
+
+  width: 80%;
   margin: 0 auto 20px auto;
+
+  content: "";
+
+  border-bottom: 1px #A5A692 solid;
 }
-.personalInfo__contact *{
-  color: #A5A692;
+.personalInfo__contact * {
   margin: 0 0 0px 10px;
+
+  color: #A5A692;
 }
 .personalInfo__contact--title {
-  text-align: center;
-  font-size: 18px;
   margin: 0 0 10px 0;
-  color: #F2A71B;
-  font-weight: 700;
+
+  text-align: center;
   text-transform: uppercase;
-  
+
+  color: #F2A71B;
+
+  font-size: 18px;
+  font-weight: 700;
 }
 .personalInfo__contact--phone::before {
-  content: " ";
   display: inline-block;
+
   width: 20px;
   height: 20px;
+
+  content: " ";
   vertical-align: middle;
+
   background: url(/my_resume/img/phone-call.svg);
 }
 
 .personalInfo__contact--mail::before {
-  content: " ";
   display: inline-block;
+
   width: 20px;
   height: 20px;
+
+  content: " ";
   vertical-align: middle;
+
   background: url(/my_resume/img/mail.svg);
 }
 .personalInfo__contact--linkedin::before {
-  content: " ";
   display: inline-block;
+
   width: 20px;
   height: 20px;
+
+  content: " ";
   vertical-align: middle;
+
   background: url(/my_resume/img/linkedin.svg);
 }
 .personalInfo__contact--github::before {
-  content: " ";
   display: inline-block;
+
   width: 20px;
   height: 20px;
+
+  content: " ";
   vertical-align: middle;
+
   background: url(/my_resume/img/github.svg);
 }
 .personalInfo__contact--geolocation iframe {
- margin-top: 10px;
+  margin-top: 10px;
 }
 .personalInfo__contact--geolocation::before {
-  content: " ";
   display: inline-block;
+
   width: 20px;
   height: 20px;
+
+  content: " ";
   vertical-align: middle;
+
   background: url(/my_resume/img/map-pin.svg);
 }
 .personalInfo__contact ul {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
 }
 .personalInfo__contact ul li {
   margin-bottom: 10px;
 }
 .personalInfo__contact ul a {
-  position: relative; 
+  position: relative;
 }
 .personalInfo__contact a::before {
-  content: '';
   position: absolute;
-  width: 100%;
-  height: 2px;
-  border-radius: 6px;
-  background-color: #b8bdc0;
   bottom: 0;
   left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
+
+  width: 100%;
+  height: 2px;
+
+  content: "";
   transition: transform .4s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: right;
+
+  border-radius: 6px;
+  background-color: #B8BDC0;
 }
 .personalInfo__contact ul a:hover::before {
-  transform-origin: left;
   transform: scaleX(1);
+  transform-origin: left;
 }
 .personalInfo__contact ul a:hover {
-  color: rgb(255, 255, 255);
-  transform-origin: right;
-  transform: scaleX(1);
   transition: transform, color .4s ease-in-out;
+  transform: scaleX(1);
+  transform-origin: right;
+
+  color: rgb(255, 255, 255);
 }
 
-.personalInfo__education {
-}
 .personalInfo__education::after {
-  content: "";
-  width: 80%;
   display: block;
-  border-bottom: 1px #A5A692 solid;
+
+  width: 80%;
   margin: 0 auto 20px auto;
+
+  content: "";
+
+  border-bottom: 1px #A5A692 solid;
 }
 .personalInfo__education * {
-  color: #A5A692;
   margin: 0 0 10px 10px;
+
+  color: #A5A692;
 }
 .personalInfo__education--title {
   text-align: center;
-  font-size: 18px;
-  
-  color: #F2A71B;
-  font-weight: 700;
   text-transform: uppercase;
+
+  color: #F2A71B;
+
+  font-size: 18px;
+  font-weight: 700;
 }
 .personalInfo__education--year {
-  color: #ffffff;
+  color: #FFF;
+
   font-weight: 800;
 }
 .personalInfo__education--profession {
   color: #F2A71B;
+
   font-weight: 700;
 }
 .personalInfo__education--university {
   color: #025E73;
-  
+
   font-weight: 700;
 }
 .personalInfo__languages {
-  color: #A5A692;
   margin: 0 0 10px 10px;
+
+  color: #A5A692;
 }
-.personalInfo__languages--title{
+.personalInfo__languages--title {
   text-align: center;
-  font-size: 18px;
-  color: #F2A71B;
-  font-weight: 700;
   text-transform: uppercase;
+
+  color: #F2A71B;
+
+  font-size: 18px;
+  font-weight: 700;
 }
 .personalInfo__languages--ul {
-  text-align: center;
   margin: 10px 0;
-}
-.personalInfo__languages--English {
+
+  text-align: center;
 }
 .personalInfo__languages--English progress::-webkit-progress-bar {
-  background-color: #191919;
   border: 1px #A5A692 solid;
   border-radius: 20px;
+  background-color: #191919;
 }
 .personalInfo__languages--English progress::-webkit-progress-value {
+  color: #F2A71B;
   border-radius: 20px;
   background-color: #F2A71B;
-  color: #F2A71B;
 }
 .English__title {
   display: inline-block;
 }
 .mainlInfo {
   box-sizing: border-box;
-  color: #A5A692;
   width: 100%;
-  font-size: 16px;
   margin: 50px 0 0 20px;
+
+  color: #A5A692;
+
+  font-size: 16px;
 }
-.mainlInfo__about {
-  
-}
-.mainlInfo__about--title{
-  text-align: left;
-  font-size: 18px;
-  color: #F2A71B;
-  font-weight: 700;
+.mainlInfo__about--title {
   margin: 0 0 10px 0;
+
+  text-align: left;
   text-transform: uppercase;
+
+  color: #F2A71B;
+
+  font-size: 18px;
+  font-weight: 700;
 }
 .mainlInfo__about--info {
   margin: 0 0 10px 0;
@@ -380,345 +413,256 @@ h6 {
   margin: 0 0 0px 0;
 }
 .mainlInfo__about--ul li {
-  padding: 0 0 0 20px;
   margin: 5px 0 0 0;
+  padding: 0 0 0 20px;
 }
 .mainlInfo__about--ul li::before {
-  content: "";
   display: inline-block;
-  height: 7px;
-  width: 7px;
-  vertical-align: middle;
-  border-radius: 50%;
-  border: 1px #F2A71B solid;
-  margin: 0 10px 0 0;
-}
 
-.mainlInfo__experience {
+  width: 7px;
+  height: 7px;
+  margin: 0 10px 0 0;
+
+  content: "";
+  vertical-align: middle;
+
+  border: 1px #F2A71B solid;
+  border-radius: 50%;
 }
 .mainlInfo__experience--title {
+  margin: 20px 0 10px 0;
+
   text-align: left;
-  font-size: 18px;
-  color: #F2A71B;
-  font-weight: 700;
-  margin: 30px 0 10px 0;
   text-transform: uppercase;
+
+  color: #F2A71B;
+
+  font-size: 18px;
+  font-weight: 700;
 }
 .mainlInfo__experience_main {
   position: relative;
+
   display: flex;
-  word-wrap: break-word;
+
   margin: 0 0 20px 0;
+
+  word-wrap: break-word;
 }
 .mainlInfo__experience_main li {
   margin: 10px 0 0 0;
 }
 .mainlInfo__experience_main--workTime {
-  margin: 0 10px 0 0;
   width: 35%;
+  margin: 0 10px 0 0;
 }
 .mainlInfo__experience_main--workTime::after {
-  content: "";
-  display: inline-block;
   position: absolute;
   top: 10%;
   left: 35%;
-  border-right: 1px #A5A692 solid;
+
+  display: inline-block;
+
   height: 80%;
+
+  content: "";
+
+  border-right: 1px #A5A692 solid;
 }
 .mainlInfo__experience_main--workTime li:nth-child(1) {
-  color: #ffffff;
-  font-weight: 700; 
+  color: #FFF;
+
+  font-weight: 700;
 }
 .mainlInfo__experience_main--workTime li:nth-child(2) {
   color: #025E73;
+
   font-weight: 700;
 }
 .description__experience {
-  color: #F2A71B;
   margin: 0 0 10px 0;
+
+  color: #F2A71B;
 }
 .mainlInfo__experience_main--description {
-  word-wrap: break-word;
   width: 65%;
   margin: 0 0 0 10px;
+
+  word-wrap: break-word;
 }
 .mainlInfo__experience_main--description a {
   color: #025E73;
+
   font-weight: 700;
-}
-.mainlInfo__professionalSkills {
-}  
+} 
 .mainlInfo__professionalSkills--title {
+  margin: 20px 0 10px 0;
+
   text-align: left;
-  font-size: 18px;
-  color: #F2A71B;
-  font-weight: 700;
-  margin: 30px 0 10px 0;
   text-transform: uppercase;
+
+  color: #F2A71B;
+
+  font-size: 18px;
+  font-weight: 700;
 }
 .mainlInfo__professionalSkills li {
   margin: 0 0 10px 0;
 } 
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .container {
     max-width: 970px;
   }
 }
-@media (max-width: 992px){
+@media (max-width: 992px) {
   .container {
     max-width: 750px;
+
     background: no-repeat url(/my_resume/img/Polygon\ Luminary1.svg);
     background-size: cover;
   }
   .container h2 {
     font-size: 16px;
   }
-  .personalInfo__contact iframe{
+  .personalInfo__contact iframe {
     display: none;
   }
   .personalInfo {
     font-size: 16px;
   }
-  .personalInfo__imgFio {
- 
-  }
   .personalInfo__imgFio--img {
     width: 170px;
-    height: 170px; 
+    height: 170px;
   }
   .personalInfo__imgFio--fio {
     letter-spacing: .5px;
+
     font-size: 20px !important;
-  }
-  .personalInfo__imgFio--year {
-   
   }
   .personalInfo__imgFio--position {
     letter-spacing: .5px;
   }
-  .personalInfo__contact {
-  }
   .personalInfo__contact--title {
     margin: 0 0 15px 0px;
-  }
-  .personalInfo__contact--phone {
-    
-  }
-  .personalInfo__contact--mail {
-  }
-  .personalInfo__contact--linkedin {
-  }
-  .personalInfo__contact--github {
-  }
-  .personalInfo__contact--geolocation {
-  }
-  .personalInfo__education {
-    
-  }
-  .personalInfo__education--title {
   }
   .personalInfo__education--year {
     font-size: 14px;
   }
-  .personalInfo__education--profession {
-  }
-  .personalInfo__education--university {
-  }
-  .personalInfo__languages {
-  }
-  .personalInfo__languages--title {
-  }
-  .personalInfo__languages--ul {
-  }
-  .personalInfo__languages--English {
-  }
-  .English__title {
-  }
-  .personalInfo__languages-- {
-  }
-  .mainlInfo {
-  
-  }
-  .mainlInfo__about {
-  }
-  .mainlInfo__about--title {
-  }
-  .mainlInfo__about--info {
-  }
-  .mainlInfo__about--ul {
-  }
-  .mainlInfo__experience {
-  }
-  .mainlInfo__experience--title {
-  }
-  .mainlInfo__experience_main {
-  }
   .mainlInfo__experience_main--workTime {
     font-size: 14px;
   }
-  .mainlInfo__experience_main--description {
-  }
-  .description__experience {
-  }
-  .mainlInfo__professionalSkills {
-  }
-  .mainlInfo__professionalSkills--title {
-  }
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .container {
-    max-width: none;
     display: block;
+
+    max-width: none;
     margin: 0;
   }
   .personalInfo {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
-    border-right: none;
+
     margin: 0 0px;
+    padding: 0;
+
+    border-right: none;
   }
   .personalInfo::after {
-    content: "";
-    width: 80%;
     display: block;
-    border-bottom: 1px #A5A692 solid;
+
+    width: 80%;
     margin: 20px auto 0px auto;
+
+    content: "";
+
+    border-bottom: 1px #A5A692 solid;
   }
   .personalInfo__imgFio {
-  min-width: 100%;
-  }
-
-  .personalInfo__imgFio--img {
-    
-  }
-  .personalInfo__imgFio--fio {
-  }
-  .personalInfo__imgFio--year {
-  }
-  .personalInfo__imgFio--position {
+    min-width: 100%;
   }
   .personalInfo__contact {
     max-width: 33.333%;
-    border-right: 1px #A5A692 solid;
     padding: 0 10px;
+
+    border-right: 1px #A5A692 solid;
   }
   .personalInfo__contact::after {
-    content: "";
-    width: 80%;
     display: block;
-    border-bottom: none;
+
+    width: 80%;
     margin: 0 auto 20px auto;
-  }
-  .personalInfo__contact--title {
-  }
-  .personalInfo__contact--phone {
-  }
-  .personalInfo__contact--mail {
-  }
-  .personalInfo__contact--linkedin {
-  }
-  .personalInfo__contact--github {
-  }
-  .personalInfo__contact--geolocation {
+
+    content: "";
+
+    border-bottom: none;
   }
   .personalInfo__education {
     max-width: 33.333%;
     padding: 0 10px;
   }
-  
+
   .personalInfo__education * {
     margin: 0 0 10px 0px;
-
   }
-  .personalInfo__education :last-child{
+  .personalInfo__education :last-child {
     margin: 0 0 0 0;
   }
   .personalInfo__education::after {
-    content: "";
-    width: 80%;
     display: block;
-    border-bottom: none;
+
+    width: 80%;
     margin: 0 auto 20px auto;
+
+    content: "";
+
+    border-bottom: none;
   }
   .personalInfo__education--title {
     margin: 0 0 20px 0;
   }
-  .personalInfo__education--year {
-  }
-  .personalInfo__education--profession {
-  }
-  .personalInfo__education--university {
-  }
   .personalInfo__languages {
     max-width: 33.333%;
-    padding: 0 10px;
     margin: 0 0 0px 0px;
+    padding: 0 10px;
+
     border-left: 1px #A5A692 solid;
-  }
-  .personalInfo__languages--title {
-  }
-  .personalInfo__languages--ul {
-  }
-  .personalInfo__languages--English {
-  }
-  .English__title {
-  }
-  .personalInfo__languages-- {
   }
   .mainlInfo {
     margin: 20px 0 0 0;
   }
-  .mainlInfo>* {
+  .mainlInfo > * {
     padding: 0 0 0 20px;
   }
-  .mainlInfo__about {
-  }
   .mainlInfo__about::after {
-    content: "";
-    padding: 0;
-    width: 90%;
     display: block;
-    border-bottom: 1px #A5A692 solid;
-    margin: 10px auto 20px auto;
-  }
-  .mainlInfo__about--title {
-  }
-  .mainlInfo__about--info {
-  }
-  .mainlInfo__about--ul {
-  }
-  .mainlInfo__experience {
 
+    width: 90%;
+    margin: 10px auto 20px auto;
+    padding: 0;
+
+    content: "";
+
+    border-bottom: 1px #A5A692 solid;
   }
   .mainlInfo__experience::after {
-    content: "";
-    padding: 0;
-    width: 90%;
     display: block;
-    border-bottom: 1px #A5A692 solid;
+
+    width: 90%;
     margin: 10px auto 20px auto;
-  }
-  .mainlInfo__experience--title {
-  }
-  .mainlInfo__experience_main {
+    padding: 0;
+
+    content: "";
+
+    border-bottom: 1px #A5A692 solid;
   }
   .mainlInfo__experience_main:last-child {
     margin: 0;
   }
-  .mainlInfo__experience_main--workTime {
-  }
-  .mainlInfo__experience_main--description {
-  }
-  .description__experience {
-  }
   .mainlInfo__professionalSkills {
     padding-bottom: 20px;
-  }
-  .mainlInfo__professionalSkills--title {
   }
 }
 @media (max-width: 685px) {
@@ -728,156 +672,123 @@ h6 {
   .personalInfo {
     display: block;
   }
-  .personalInfo__imgFio {
-  }
-  .personalInfo__imgFio--img {
-  }
-  .personalInfo__imgFio--fio {
-  }
-  .personalInfo__imgFio--year {
-  }
-  .personalInfo__imgFio--position {
-  }
   .personalInfo__contact {
+    max-width: 100%;
+    margin: 0 20px;
+    padding: 0;
+
+    border-right: none;
   }
-  .personalInfo__contact--title {
+
+  .personalInfo__contact ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    margin: 0;
   }
-  .personalInfo__contact--phone {
+  .personalInfo__contact::after {
+    display: block;
+
+    width: 80%;
+    margin: 10px auto 20px auto;
+
+    content: "";
+
+    border-bottom: 1px #A5A692 solid;
   }
-  .personalInfo__contact--mail {
+  .personalInfo__contact ul li {
+    width: 50%;
+    margin: 0 0px 10px 0;
   }
-  .personalInfo__contact--linkedin {
-  }
-  .personalInfo__contact--github {
-  }
-  .personalInfo__contact--geolocation {
+  .personalInfo__contact ul li:nth-child(even) {
+    text-align: right;
   }
   .personalInfo__education {
+    display: block;
+
+    max-width: 100%;
+    margin: 0 20px;
+    padding: 0;
   }
-  .personalInfo__education--title {
+  .personalInfo__education ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .personalInfo__education::after {
+    display: block;
+
+    width: 80%;
+    margin: 10px auto 20px auto;
+
+    content: "";
+
+    border-bottom: 1px #A5A692 solid;
   }
   .personalInfo__education--year {
-  }
-  .personalInfo__education--profession {
+    min-width: 23%;
   }
   .personalInfo__education--university {
+    padding-left: 23%;
   }
   .personalInfo__languages {
+    display: block;
+
+    max-width: 100%;
   }
   .personalInfo__languages--title {
-  }
-  .personalInfo__languages--ul {
-  }
-  .personalInfo__languages--English {
-  }
-  .English__title {
-  }
-  .personalInfo__languages-- {
+    text-align: center;
   }
   .mainlInfo {
-  }
-  .mainlInfo__about {
+    display: block;
+
+    max-width: 100%;
   }
   .mainlInfo__about--title {
-  }
-  .mainlInfo__about--info {
-  }
-  .mainlInfo__about--ul {
+    text-align: center;
   }
   .mainlInfo__experience {
+    display: block;
+
+    max-width: 100%;
   }
   .mainlInfo__experience--title {
-  }
-  .mainlInfo__experience_main {
-  }
-  .mainlInfo__experience_main--workTime {
-  }
-  .mainlInfo__experience_main--description {
+    text-align: center;
   }
   .description__experience {
-  }
-  .mainlInfo__professionalSkills {
+    display: block;
+
+    max-width: 100%;
   }
   .mainlInfo__professionalSkills--title {
+    text-align: center;
   }
 }
-@media (max-width: 480px) {
-  .container {
- 
+@media (max-width: 420px) {
+  .personalInfo__contact ul {
+    display: flex;
+    flex-direction: column;
   }
-  .personalInfo {
- 
+  .personalInfo__contact ul li {
+    min-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: left;
   }
-  .personalInfo__imgFio {
+  .personalInfo__contact ul li:nth-child(even) {
+    text-align: left;
   }
-  .personalInfo__imgFio--img {
-  }
-  .personalInfo__imgFio--fio {
-  }
-  .personalInfo__imgFio--year {
-  }
-  .personalInfo__imgFio--position {
-  }
-  .personalInfo__contact {
-  }
-  .personalInfo__contact--title {
-  }
-  .personalInfo__contact--phone {
-  }
-  .personalInfo__contact--mail {
-  }
-  .personalInfo__contact--linkedin {
-  }
-  .personalInfo__contact--github {
-  }
-  .personalInfo__contact--geolocation {
-  }
-  .personalInfo__education {
-  }
-  .personalInfo__education--title {
+  .personalInfo__education ul {
+    display: flex;
+    flex-direction: column;
   }
   .personalInfo__education--year {
-  }
-  .personalInfo__education--profession {
+    min-width: none;
   }
   .personalInfo__education--university {
-  }
-  .personalInfo__languages {
-  }
-  .personalInfo__languages--title {
-  }
-  .personalInfo__languages--ul {
-  }
-  .personalInfo__languages--English {
-  }
-  .English__title {
-  }
-  .personalInfo__languages-- {
-  }
-  .mainlInfo {
-  }
-  .mainlInfo__about {
-  }
-  .mainlInfo__about--title {
-  }
-  .mainlInfo__about--info {
-  }
-  .mainlInfo__about--ul {
-  }
-  .mainlInfo__experience {
-  }
-  .mainlInfo__experience--title {
-  }
-  .mainlInfo__experience_main {
-  }
-  .mainlInfo__experience_main--workTime {
-  }
-  .mainlInfo__experience_main--description {
-  }
-  .description__experience {
-  }
-  .mainlInfo__professionalSkills {
-  }
-  .mainlInfo__professionalSkills--title {
+    padding-left: 0;
   }
 }

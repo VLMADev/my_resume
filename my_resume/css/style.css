@@ -1,39 +1,50 @@
 * {
-  margin: 0; /* внешний отсуп */
-  padding: 0; /* внутренний отсуп */
+  margin: 0;
+  /* внешний отсуп */
+  padding: 0;
+  /* внутренний отсуп */
 
-  border: 0; /* обводка */
+  border: 0;
+  /* обводка */
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   /* меняет ширину блока что было удобно верстать */
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  /* box-sizing: border-box - начинает включать в себя внутренний отступ и обводку */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* box-sizing     : border-box - начинает включать в себя внутренний отступ и обводку */
 }
 
-:focus, :active {
+:focus,
+:active {
   /* убераем линии обводки у некоторых браузеров */
   outline: none;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
   /* убераем линии обводки у некоторых браузеров */
   outline: none;
 }
 
-nav, footer, header, aside {
+nav,
+footer,
+header,
+aside {
   /* делаем элементы блочными */
   display: block;
 }
 
-html, body {
+html,
+body {
   /* уравнивает ширфты и элементы для разынх браузеров (заприщают самовольное увеличение шрифта(пример))*/
   width: 100%;
   height: 100%;
 
-  background-color: #3F3F3F;
+  background-color: #3f3f3f;
 
   font-family: "Nunito", sans-serif;
   font-size: 100%;
@@ -41,11 +52,13 @@ html, body {
   line-height: 1;
 
   -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
   /* наследование шрифта */
   font-family: inherit;
 }
@@ -59,13 +72,16 @@ button {
   /*убирают курсор при вводе текста*/
   cursor: pointer;
 }
+
 button::-moz-focus-inner {
   /* убирают лишние отступы в firefox для кнопок */
   padding: 0;
 
   border: 0;
 }
-a, a:visited {
+
+a,
+a:visited {
   /**/
   text-decoration: none;
 }
@@ -87,11 +103,17 @@ img {
   vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   /* обнуляем заголовки h */
   font-size: inherit;
   font-weight: 400;
 }
+
 .container {
   display: flex;
 
@@ -107,12 +129,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 10px 0 0;
   padding: 0 0 50px 0;
 
-  border-right: 2px #A5A692 solid;
+  border-right: 2px #a5a692 solid;
 }
 
 .personalInfo__imgFio {
   text-align: center;
 }
+
 .personalInfo__imgFio::after {
   display: block;
 
@@ -122,8 +145,9 @@ h1, h2, h3, h4, h5, h6 {
 
   content: "";
 
-  border-bottom: 1px #A5A692 solid;
+  border-bottom: 1px #a5a692 solid;
 }
+
 .personalInfo__imgFio--img {
   position: relative;
   z-index: 2;
@@ -132,29 +156,33 @@ h1, h2, h3, h4, h5, h6 {
   height: 200px;
   margin: 25px auto;
 
-  border: 2px #A5A692 solid;
+  border: 2px #a5a692 solid;
   border-radius: 50%;
 }
+
 .personalInfo__imgFio--img:hover {
   transition-delay: 1s;
   animation: ligth 1s linear;
 
-  border: 2px #AE00FF solid;
-  box-shadow: 0 0 10px #AE00FF, 0 0 20px #001EFF, 0 0 50px #AE00FF;
+  border: 2px #ae00ff solid;
+  box-shadow: 0 0 10px #ae00ff, 0 0 20px #001eff, 0 0 50px #ae00ff;
 }
 
 @keyframes ligth {
   0% {
-    box-shadow: -4px 0px 20px #001EFF, 4px 0px 5px #AE00FF;
+    box-shadow: -4px 0px 20px #001eff, 4px 0px 5px #ae00ff;
   }
+
   33% {
-    box-shadow: 0px 4px 20px #AE00FF, 0px -4px 5px #001EFF;
+    box-shadow: 0px 4px 20px #ae00ff, 0px -4px 5px #001eff;
   }
+
   66% {
-    box-shadow: 0px 0px 20px #001EFF, 0px 0px -5px #AE00FF;
+    box-shadow: 0px 0px 20px #001eff, 0px 0px -5px #ae00ff;
   }
+
   100% {
-    box-shadow: 4px 0px 5px #AE00FF, -4px 0px 20px #001EFF;
+    box-shadow: 4px 0px 5px #ae00ff, -4px 0px 20px #001eff;
   }
 }
 
@@ -162,35 +190,33 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   text-transform: capitalize;
 
-  color: #F2A71B;
+  color: #f2a71b;
 
   font-size: 26px;
   font-weight: 700;
-  /* 
-  color: #191919; 
-  color: #025E73;
-  color: #A5A692;
-  color: #F2A71B;
-  */
 }
+
 .personalInfo__imgFio--year {
   margin: 5px;
 
   text-transform: lowercase;
 
-  color: #A5A692;
+  color: #a5a692;
 }
+
 .personalInfo__imgFio--position {
   text-transform: uppercase;
 
-  color: #F2A71B;
+  color: #f2a71b;
 
   font-size: 18px;
   font-weight: 700;
 }
+
 .personalInfo__contact {
   text-align: left;
 }
+
 .personalInfo__contact::after {
   display: block;
 
@@ -199,24 +225,27 @@ h1, h2, h3, h4, h5, h6 {
 
   content: "";
 
-  border-bottom: 1px #A5A692 solid;
+  border-bottom: 1px #a5a692 solid;
 }
+
 .personalInfo__contact * {
   margin: 0 0 0px 10px;
 
-  color: #A5A692;
+  color: #a5a692;
 }
+
 .personalInfo__contact--title {
   margin: 0 0 10px 0;
 
   text-align: center;
   text-transform: uppercase;
 
-  color: #F2A71B;
+  color: #f2a71b;
 
   font-size: 18px;
   font-weight: 700;
 }
+
 .personalInfo__contact--phone::before {
   display: inline-block;
 
@@ -240,6 +269,7 @@ h1, h2, h3, h4, h5, h6 {
 
   background: url(/my_resume/img/mail.svg);
 }
+
 .personalInfo__contact--linkedin::before {
   display: inline-block;
 
@@ -251,6 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 
   background: url(/my_resume/img/linkedin.svg);
 }
+
 .personalInfo__contact--github::before {
   display: inline-block;
 
@@ -262,9 +293,11 @@ h1, h2, h3, h4, h5, h6 {
 
   background: url(/my_resume/img/github.svg);
 }
+
 .personalInfo__contact--geolocation iframe {
   margin-top: 10px;
 }
+
 .personalInfo__contact--geolocation::before {
   display: inline-block;
 
@@ -276,17 +309,21 @@ h1, h2, h3, h4, h5, h6 {
 
   background: url(/my_resume/img/map-pin.svg);
 }
+
 .personalInfo__contact ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .personalInfo__contact ul li {
   margin-bottom: 10px;
 }
+
 .personalInfo__contact ul a {
   position: relative;
 }
+
 .personalInfo__contact a::before {
   position: absolute;
   bottom: 0;
@@ -296,19 +333,21 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
 
   content: "";
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   transform: scaleX(0);
   transform-origin: right;
 
   border-radius: 6px;
-  background-color: #B8BDC0;
+  background-color: #b8bdc0;
 }
+
 .personalInfo__contact ul a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
+
 .personalInfo__contact ul a:hover {
-  transition: transform, color .4s ease-in-out;
+  transition: transform, color 0.4s ease-in-out;
   transform: scaleX(1);
   transform-origin: right;
 
@@ -323,99 +362,116 @@ h1, h2, h3, h4, h5, h6 {
 
   content: "";
 
-  border-bottom: 1px #A5A692 solid;
+  border-bottom: 1px #a5a692 solid;
 }
+
 .personalInfo__education * {
   margin: 0 0 10px 10px;
 
-  color: #A5A692;
+  color: #a5a692;
 }
+
 .personalInfo__education--title {
   text-align: center;
   text-transform: uppercase;
 
-  color: #F2A71B;
+  color: #f2a71b;
 
   font-size: 18px;
   font-weight: 700;
 }
+
 .personalInfo__education--year {
-  color: #FFF;
+  color: #fff;
 
   font-weight: 800;
 }
+
 .personalInfo__education--profession {
-  color: #F2A71B;
+  color: #f2a71b;
 
   font-weight: 700;
 }
+
 .personalInfo__education--university {
-  color: #025E73;
+  color: #025e73;
 
   font-weight: 700;
 }
+
 .personalInfo__languages {
   margin: 0 0 10px 10px;
 
-  color: #A5A692;
+  color: #a5a692;
 }
+
 .personalInfo__languages--title {
   text-align: center;
   text-transform: uppercase;
 
-  color: #F2A71B;
+  color: #f2a71b;
 
   font-size: 18px;
   font-weight: 700;
 }
+
 .personalInfo__languages--ul {
   margin: 10px 0;
 
   text-align: center;
 }
+
 .personalInfo__languages--English progress::-webkit-progress-bar {
-  border: 1px #A5A692 solid;
+  border: 1px #a5a692 solid;
   border-radius: 20px;
   background-color: #191919;
 }
+
 .personalInfo__languages--English progress::-webkit-progress-value {
-  color: #F2A71B;
+  color: #f2a71b;
   border-radius: 20px;
-  background-color: #F2A71B;
+  background-color: #f2a71b;
 }
+
 .English__title {
   display: inline-block;
 }
+
 .mainlInfo {
   box-sizing: border-box;
   width: 100%;
   margin: 50px 0 0 20px;
 
-  color: #A5A692;
+  color: #a5a692;
 
   font-size: 16px;
 }
+
 .mainlInfo__about--title {
   margin: 0 0 10px 0;
 
   text-align: left;
   text-transform: uppercase;
 
-  color: #F2A71B;
+  color: #f2a71b;
 
   font-size: 18px;
   font-weight: 700;
 }
+
 .mainlInfo__about--info {
   margin: 0 0 10px 0;
 }
+
 .mainlInfo__about--ul {
   margin: 0 0 0px 0;
 }
+
 .mainlInfo__about--ul li {
   margin: 5px 0 0 0;
   padding: 0 0 0 20px;
 }
+
 .mainlInfo__about--ul li::before {
   display: inline-block;
 
@@ -426,20 +482,22 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   vertical-align: middle;
 
-  border: 1px #F2A71B solid;
+  border: 1px #f2a71b solid;
   border-radius: 50%;
 }
+
 .mainlInfo__experience--title {
   margin: 20px 0 10px 0;
 
   text-align: left;
   text-transform: uppercase;
 
-  color: #F2A71B;
+  color: #f2a71b;
 
   font-size: 18px;
   font-weight: 700;
 }
+
 .mainlInfo__experience_main {
   position: relative;
 
@@ -449,13 +507,16 @@ h1, h2, h3, h4, h5, h6 {
 
   word-wrap: break-word;
 }
+
 .mainlInfo__experience_main li {
   margin: 10px 0 0 0;
 }
+
 .mainlInfo__experience_main--workTime {
   width: 35%;
   margin: 0 10px 0 0;
 }
+
 .mainlInfo__experience_main--workTime::after {
   position: absolute;
   top: 10%;
@@ -467,54 +528,62 @@ h1, h2, h3, h4, h5, h6 {
 
   content: "";
 
-  border-right: 1px #A5A692 solid;
+  border-right: 1px #a5a692 solid;
 }
+
 .mainlInfo__experience_main--workTime li:nth-child(1) {
-  color: #FFF;
+  color: #fff;
 
   font-weight: 700;
 }
+
 .mainlInfo__experience_main--workTime li:nth-child(2) {
-  color: #025E73;
+  color: #025e73;
 
   font-weight: 700;
 }
+
 .description__experience {
   margin: 0 0 10px 0;
 
-  color: #F2A71B;
+  color: #f2a71b;
 }
+
 .mainlInfo__experience_main--description {
   width: 65%;
   margin: 0 0 0 10px;
 
   word-wrap: break-word;
 }
+
 .mainlInfo__experience_main--description a {
-  color: #025E73;
+  color: #025e73;
 
   font-weight: 700;
-} 
+}
+
 .mainlInfo__professionalSkills--title {
   margin: 20px 0 10px 0;
 
   text-align: left;
   text-transform: uppercase;
 
-  color: #F2A71B;
+  color: #f2a71b;
 
   font-size: 18px;
   font-weight: 700;
 }
+
 .mainlInfo__professionalSkills li {
   margin: 0 0 10px 0;
-} 
+}
 
 @media (max-width: 1200px) {
   .container {
     max-width: 970px;
   }
 }
+
 @media (max-width: 992px) {
   .container {
     max-width: 750px;
@@ -522,37 +591,47 @@ h1, h2, h3, h4, h5, h6 {
     background: no-repeat url(/my_resume/img/Polygon\ Luminary1.svg);
     background-size: cover;
   }
+
   .container h2 {
     font-size: 16px;
   }
+
   .personalInfo__contact iframe {
     display: none;
   }
+
   .personalInfo {
     font-size: 16px;
   }
+
   .personalInfo__imgFio--img {
     width: 170px;
     height: 170px;
   }
+
   .personalInfo__imgFio--fio {
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 
     font-size: 20px !important;
   }
+
   .personalInfo__imgFio--position {
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
   }
+
   .personalInfo__contact--title {
     margin: 0 0 15px 0px;
   }
+
   .personalInfo__education--year {
     font-size: 14px;
   }
+
   .mainlInfo__experience_main--workTime {
     font-size: 14px;
   }
 }
+
 @media (max-width: 767px) {
   .container {
     display: block;
@@ -560,6 +639,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: none;
     margin: 0;
   }
+
   .personalInfo {
     display: flex;
     flex-wrap: wrap;
@@ -570,6 +650,7 @@ h1, h2, h3, h4, h5, h6 {
 
     border-right: none;
   }
+
   .personalInfo::after {
     display: block;
 
@@ -578,17 +659,20 @@ h1, h2, h3, h4, h5, h6 {
 
     content: "";
 
-    border-bottom: 1px #A5A692 solid;
+    border-bottom: 1px #a5a692 solid;
   }
+
   .personalInfo__imgFio {
     min-width: 100%;
   }
+
   .personalInfo__contact {
     max-width: 33.333%;
     padding: 0 10px;
 
-    border-right: 1px #A5A692 solid;
+    border-right: 1px #a5a692 solid;
   }
+
   .personalInfo__contact::after {
     display: block;
 
@@ -599,6 +683,7 @@ h1, h2, h3, h4, h5, h6 {
 
     border-bottom: none;
   }
+
   .personalInfo__education {
     max-width: 33.333%;
     padding: 0 10px;
@@ -607,9 +692,11 @@ h1, h2, h3, h4, h5, h6 {
   .personalInfo__education * {
     margin: 0 0 10px 0px;
   }
+
   .personalInfo__education :last-child {
     margin: 0 0 0 0;
   }
+
   .personalInfo__education::after {
     display: block;
 
@@ -620,22 +707,27 @@ h1, h2, h3, h4, h5, h6 {
 
     border-bottom: none;
   }
+
   .personalInfo__education--title {
     margin: 0 0 20px 0;
   }
+
   .personalInfo__languages {
     max-width: 33.333%;
     margin: 0 0 0px 0px;
     padding: 0 10px;
 
-    border-left: 1px #A5A692 solid;
+    border-left: 1px #a5a692 solid;
   }
+
   .mainlInfo {
     margin: 20px 0 0 0;
   }
-  .mainlInfo > * {
+
+  .mainlInfo>* {
     padding: 0 0 0 20px;
   }
+
   .mainlInfo__about::after {
     display: block;
 
@@ -645,8 +737,9 @@ h1, h2, h3, h4, h5, h6 {
 
     content: "";
 
-    border-bottom: 1px #A5A692 solid;
+    border-bottom: 1px #a5a692 solid;
   }
+
   .mainlInfo__experience::after {
     display: block;
 
@@ -656,22 +749,27 @@ h1, h2, h3, h4, h5, h6 {
 
     content: "";
 
-    border-bottom: 1px #A5A692 solid;
+    border-bottom: 1px #a5a692 solid;
   }
+
   .mainlInfo__experience_main:last-child {
     margin: 0;
   }
+
   .mainlInfo__professionalSkills {
     padding-bottom: 20px;
   }
 }
+
 @media (max-width: 685px) {
   .container {
     display: block;
   }
+
   .personalInfo {
     display: block;
   }
+
   .personalInfo__contact {
     max-width: 100%;
     margin: 0 20px;
@@ -689,6 +787,7 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     margin: 0;
   }
+
   .personalInfo__contact::after {
     display: block;
 
@@ -697,15 +796,18 @@ h1, h2, h3, h4, h5, h6 {
 
     content: "";
 
-    border-bottom: 1px #A5A692 solid;
+    border-bottom: 1px #a5a692 solid;
   }
+
   .personalInfo__contact ul li {
     width: 50%;
     margin: 0 0px 10px 0;
   }
+
   .personalInfo__contact ul li:nth-child(even) {
     text-align: right;
   }
+
   .personalInfo__education {
     display: block;
 
@@ -713,10 +815,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 20px;
     padding: 0;
   }
+
   .personalInfo__education ul {
     display: flex;
     flex-wrap: wrap;
   }
+
   .personalInfo__education::after {
     display: block;
 
@@ -725,52 +829,64 @@ h1, h2, h3, h4, h5, h6 {
 
     content: "";
 
-    border-bottom: 1px #A5A692 solid;
+    border-bottom: 1px #a5a692 solid;
   }
+
   .personalInfo__education--year {
     min-width: 23%;
   }
+
   .personalInfo__education--university {
     padding-left: 23%;
   }
+
   .personalInfo__languages {
     display: block;
 
     max-width: 100%;
   }
+
   .personalInfo__languages--title {
     text-align: center;
   }
+
   .mainlInfo {
     display: block;
 
     max-width: 100%;
   }
+
   .mainlInfo__about--title {
     text-align: center;
   }
+
   .mainlInfo__experience {
     display: block;
 
     max-width: 100%;
   }
+
   .mainlInfo__experience--title {
     text-align: center;
   }
+
   .description__experience {
     display: block;
 
     max-width: 100%;
   }
+
   .mainlInfo__professionalSkills--title {
     text-align: center;
   }
 }
+
 @media (max-width: 420px) {
   .personalInfo__contact ul {
     display: flex;
     flex-direction: column;
   }
+
   .personalInfo__contact ul li {
     min-width: 60%;
     margin-right: auto;
@@ -778,16 +894,20 @@ h1, h2, h3, h4, h5, h6 {
 
     text-align: left;
   }
+
   .personalInfo__contact ul li:nth-child(even) {
     text-align: left;
   }
+
   .personalInfo__education ul {
     display: flex;
     flex-direction: column;
   }
+
   .personalInfo__education--year {
     min-width: none;
   }
+
   .personalInfo__education--university {
     padding-left: 0;
   }
